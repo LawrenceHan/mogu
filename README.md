@@ -12,6 +12,7 @@
 请求结束后更新对应的cell。但是怎么更新cell比较好一点？我的见解是请求完成后，首先更新数据。
 然后看对应的cell是不是可见的(tableView.visibleCells)，如果可见的话，就直接更新cell里的内容，而不必reloadcell。
 如果cell不可见，那么当它可见时，tableview自然会reload这个cell。
+
 Reference:
 >
 Reloading a row causes the table view to ask its data source for a new cell for that row. The table animates that new cell in as it animates the old row out. Call this method if you want to alert the user that the value of a cell is changing. If, however, notifying the user is not important—that is, you just want to change the value that a cell is displaying—you can get the cell for a particular row and set its new value.
